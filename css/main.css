@@ -93,7 +93,8 @@ form {
 .contactInfo {
   background: #4E92DF;
   padding: 2rem;
-  color: #ffffff; }
+  color: #ffffff;
+  font-size: 1.8rem; }
 
 .reg-info {
   padding: 1rem;

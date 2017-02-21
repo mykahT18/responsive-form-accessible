@@ -86,8 +86,8 @@ form {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  -ms-flex-align: center;
-      align-items: center;
+  -ms-flex-align: stretch;
+      align-items: stretch;
   background: #F7F7F7; }
 
 .contactInfo {
@@ -111,18 +111,21 @@ form {
   background-image: url(../svg/email.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  text-indent: 2.7rem;
+  text-indent: 3rem;
   margin-top: 0.8rem; }
 
 input {
   display: block;
   outline: none;
   margin: 0.5rem 0rem;
-  padding: 1rem 10rem; }
+  padding: 1.5rem 0.5rem;
+  width: 100%; }
 
 button {
   padding: 2rem 16rem;
   margin-top: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
   margin-bottom: 3rem;
   border-style: none;
   background: #4E92DF;

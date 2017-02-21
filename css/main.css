@@ -80,21 +80,38 @@ h2 {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center; }
+  @media only screen and (min-width: 1000px) {
+    h2 {
+      -ms-flex-order: 1;
+          order: 1; } }
+
+@media only screen and (min-width: 1000px) {
+  .mainContanier {
+    display: -ms-flexbox;
+    display: flex; } }
+
+@media only screen and (min-width: 1000px) {
+  .contact-title {
+    -ms-flex-order: 3;
+        order: 3; } }
 
 form {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-align: stretch;
-      align-items: stretch;
   background: #F7F7F7; }
+  @media only screen and (min-width: 1000px) {
+    form {
+      -ms-flex-order: 2;
+          order: 2; } }
 
 .contactInfo {
   background: #4E92DF;
   padding: 2rem;
   color: #ffffff;
   font-size: 1.8rem; }
+  @media only screen and (min-width: 1000px) {
+    .contactInfo {
+      -ms-flex-order: 4;
+          order: 4;
+      height: 50%; } }
 
 .reg-info {
   padding: 1rem;

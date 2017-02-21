@@ -128,6 +128,22 @@ input {
 label {
   font-size: 2rem; }
 
+select {
+  background-image: url(../svg/down-chevron.svg);
+  background-repeat: no-repeat;
+  background-position: 97% 55%;
+  background-size: 3rem;
+  background-color: #E0E0E0;
+  border-radius: 0.5rem;
+  outline: none;
+  margin: 0.5rem 0rem;
+  padding: 1.5rem 0.5rem;
+  width: 100%;
+  height: 7rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
 button {
   padding: 2rem 16rem;
   margin-top: 1rem;

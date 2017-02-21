@@ -58,7 +58,7 @@ table {
   border-spacing: 0; }
 
 html {
-  font-family: "Program OT", Arial, sans-serif;
+  font-family: "PT Sans", sans-serif;
   line-height: 1.5; }
 
 body {
@@ -135,6 +135,8 @@ select {
   background-size: 3rem;
   background-color: #E0E0E0;
   border-radius: 0.5rem;
+  border-style: none;
+  font-size: 1.6rem;
   outline: none;
   margin: 0.5rem 0rem;
   padding: 1.5rem 0.5rem;

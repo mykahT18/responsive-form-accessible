@@ -1,0 +1,78 @@
+@import 'base/reset';
+
+@import 'utilities/vars';
+@import 'utilities/mixins';
+
+@import 'base/base';
+@import 'layout/nav';
+
+html {
+  font-family: $font-choice;
+  line-height: 1.5;
+}
+body{
+	font-size: $font-size;
+}
+header{
+	    background: #515151;
+	    padding: 2rem;
+	    text-align: center;
+}
+h1{
+	background: #515151;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+h2{
+	color: #111111;
+	padding: 2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+form{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F7F7F7;
+
+}
+.contactInfo{
+    background: #4E92DF;
+    padding: 2rem;
+    color: #ffffff;
+}
+
+.reg-info{
+	padding: 1rem;
+	margin-top: 1rem;
+}
+.phoneNumber{
+	background-image: url(../svg/phone.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 1rem 0rem;
+	text-indent: 2.5rem;
+	margin-top: 0.6rem;
+}
+.contactEmail{
+	background-image: url(../svg/email.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	text-indent: 2.7rem;
+	margin-top: 0.8rem;
+}
+input{
+	display: block;
+	outline: none;
+    margin: 0.5rem 0rem;
+    padding: 1rem 10rem;
+}
+button{
+	padding: 2rem 16rem;
+	margin-top: 1rem;
+    margin-bottom: 3rem;
+    border-style: none;
+    background: #4E92DF;
+    border-radius: 0.5rem;
+}

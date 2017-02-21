@@ -1,0 +1,129 @@
+/* CSS RESET
+==================================================================================================== 
+====================================================================================================
+*/
+html, body, div, main, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, button, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, textarea,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+::before, ::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  box-sizing: border-box; }
+
+/* HTML5 - Older browser support
+====================================================================== */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* BODY
+====================================================================== */
+body {
+  line-height: 1; }
+
+/* LISTS - Clear bullets
+====================================================================== */
+ol, ul {
+  list-style: none; }
+
+/* QUOTES
+====================================================================== */
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* TABLES
+====================================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html {
+  font-family: "Program OT", Arial, sans-serif;
+  line-height: 1.5; }
+
+body {
+  font-size: 1.6rem; }
+
+header {
+  background: #515151;
+  padding: 2rem;
+  text-align: center; }
+
+h1 {
+  background: #515151;
+  color: #ffffff;
+  text-transform: uppercase; }
+
+h2 {
+  color: #111111;
+  padding: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center; }
+
+form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  background: #F7F7F7; }
+
+.contactInfo {
+  background: #4E92DF;
+  padding: 2rem;
+  color: #ffffff; }
+
+.reg-info {
+  padding: 1rem;
+  margin-top: 1rem; }
+
+.phoneNumber {
+  background-image: url(../svg/phone.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 1rem 0rem;
+  text-indent: 2.5rem;
+  margin-top: 0.6rem; }
+
+.contactEmail {
+  background-image: url(../svg/email.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-indent: 2.7rem;
+  margin-top: 0.8rem; }
+
+input {
+  display: block;
+  outline: none;
+  margin: 0.5rem 0rem;
+  padding: 1rem 10rem; }
+
+button {
+  padding: 2rem 16rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  border-style: none;
+  background: #4E92DF;
+  border-radius: 0.5rem; }

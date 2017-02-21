@@ -116,6 +116,8 @@ form {
 
 input {
   display: block;
+  background: #E0E0E0;
+  border-radius: 0.5rem;
   outline: none;
   margin: 0.5rem 0rem;
   padding: 1.5rem 0.5rem;

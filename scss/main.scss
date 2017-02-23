@@ -9,7 +9,6 @@
 html {
   font-family: $font-choice;
   line-height: 1.5;
-  // width: 100%;
 }
 body{
 	font-size: $font-size;
@@ -18,16 +17,14 @@ header{
 	    background: #515151;
 	    padding: 2rem;
 	    text-align: center;
-	    // width: 100%;
-
-	@include screen(large){
-    	
-    }
-}
+} 
 h1{
 	background: #515151;
 	color: #ffffff;
 	text-transform: uppercase;
+     @include screen(large){
+        text-align: left;
+    }
 }
 h2{
 	color: #111111;
@@ -35,22 +32,39 @@ h2{
 	font-weight: bold;
 	text-transform: uppercase;
 	text-align: center;
-
-	 @include screen(large){
-    	order: 1;
+    @include screen(large){
+        text-align: left;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        padding-left: 0rem;
     }
+}
+.error{
+    display: none;
 }
 .mainContanier{
     @include screen(large){
     	display: flex;
+        margin-left: 2rem;
+        justify-content: space-between;
     }
 
 }
-.contact-title{
-	@include screen(large){
-    	order: 3;
+.form-container{
+    @include screen(large){
+        order: 1;
+        flex-basis: 55.3%;
     }
 }
+    
+@include screen(large){
+    .sub-container{
+        order: 2;
+        flex-basis: 40%;
+        margin-right: 2rem;
+    }
+}
+
 form{
 	// display: flex;
  //    flex-direction: column;
@@ -65,16 +79,19 @@ form{
     background: #4E92DF;
     padding: 2rem;
     color: #ffffff;
-    font-size: 1.8rem;
-     @include screen(large){
-    	order: 4;
-    	height: 50%;
+    // font-size: 1.6rem;
+  @include screen(large){
+        font-size: $font-size;
     }
 }
 
 .reg-info{
 	padding: 1rem;
 	margin-top: 1rem;
+     @include screen(large){
+       margin-top: 0rem;
+    }
+
 }
 .phoneNumber{
 	background-image: url(../svg/phone.svg);
@@ -100,9 +117,22 @@ input{
     padding: 1.5rem 0.5rem;
     width: 100%;
     height: 7rem;
+
+     @include screen(large){
+        font-size: $font-size;
+        padding: 0.5rem 0.5rem;
+        height: 4rem;
+        width: 60%;
+    }
 }
 label{
 	font-size: 2rem;
+     @include screen(large){
+        font-size: $font-size;
+    }
+}
+span{
+    font-size: 1rem;
 }
 select{
 	background-image: url(../svg/down-chevron.svg);
@@ -119,9 +149,15 @@ select{
     width: 100%;
     height: 7rem;
     appearance: none;
+     @include screen(large){
+        padding: 0.5rem 0.5rem;
+        width: 60%;
+        height: 4rem;
+    }
 }
 button{
-    padding: 2rem 16rem;
+    width: 92%;
+    padding: 1rem 1rem;
     margin-top: 1rem;
     margin-right: 1rem;
     margin-left: 1rem;
@@ -131,4 +167,10 @@ button{
     border-radius: 0.5rem;
     color: #ffffff;
     font-size: 2rem;
+
+     @include screen(large){
+        font-size: $font-size;
+        padding: 1.5rem 0rem;
+        width: 57.1%;
+    }
 }

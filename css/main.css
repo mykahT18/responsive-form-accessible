@@ -73,6 +73,9 @@ h1 {
   background: #515151;
   color: #ffffff;
   text-transform: uppercase; }
+  @media only screen and (min-width: 1000px) {
+    h1 {
+      text-align: left; } }
 
 h2 {
   color: #111111;
@@ -82,18 +85,36 @@ h2 {
   text-align: center; }
   @media only screen and (min-width: 1000px) {
     h2 {
-      -ms-flex-order: 1;
-          order: 1; } }
+      text-align: left;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+      padding-left: 0rem; } }
+
+.error {
+  display: none; }
 
 @media only screen and (min-width: 1000px) {
   .mainContanier {
     display: -ms-flexbox;
-    display: flex; } }
+    display: flex;
+    margin-left: 2rem;
+    -ms-flex-pack: justify;
+        justify-content: space-between; } }
 
 @media only screen and (min-width: 1000px) {
-  .contact-title {
-    -ms-flex-order: 3;
-        order: 3; } }
+  .form-container {
+    -ms-flex-order: 1;
+        order: 1;
+    -ms-flex-preferred-size: 55.3%;
+        flex-basis: 55.3%; } }
+
+@media only screen and (min-width: 1000px) {
+  .sub-container {
+    -ms-flex-order: 2;
+        order: 2;
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    margin-right: 2rem; } }
 
 form {
   background: #F7F7F7; }
@@ -105,17 +126,17 @@ form {
 .contactInfo {
   background: #4E92DF;
   padding: 2rem;
-  color: #ffffff;
-  font-size: 1.8rem; }
+  color: #ffffff; }
   @media only screen and (min-width: 1000px) {
     .contactInfo {
-      -ms-flex-order: 4;
-          order: 4;
-      height: 50%; } }
+      font-size: 1.6rem; } }
 
 .reg-info {
   padding: 1rem;
   margin-top: 1rem; }
+  @media only screen and (min-width: 1000px) {
+    .reg-info {
+      margin-top: 0rem; } }
 
 .phoneNumber {
   background-image: url(../svg/phone.svg);
@@ -141,9 +162,21 @@ input {
   padding: 1.5rem 0.5rem;
   width: 100%;
   height: 7rem; }
+  @media only screen and (min-width: 1000px) {
+    input {
+      font-size: 1.6rem;
+      padding: 0.5rem 0.5rem;
+      height: 4rem;
+      width: 60%; } }
 
 label {
   font-size: 2rem; }
+  @media only screen and (min-width: 1000px) {
+    label {
+      font-size: 1.6rem; } }
+
+span {
+  font-size: 1rem; }
 
 select {
   background-image: url(../svg/down-chevron.svg);
@@ -162,9 +195,15 @@ select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none; }
+  @media only screen and (min-width: 1000px) {
+    select {
+      padding: 0.5rem 0.5rem;
+      width: 60%;
+      height: 4rem; } }
 
 button {
-  padding: 2rem 16rem;
+  width: 92%;
+  padding: 1rem 1rem;
   margin-top: 1rem;
   margin-right: 1rem;
   margin-left: 1rem;
@@ -174,3 +213,8 @@ button {
   border-radius: 0.5rem;
   color: #ffffff;
   font-size: 2rem; }
+  @media only screen and (min-width: 1000px) {
+    button {
+      font-size: 1.6rem;
+      padding: 1.5rem 0rem;
+      width: 57.1%; } }

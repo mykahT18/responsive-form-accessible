@@ -76,7 +76,8 @@ form{
     background: #4E92DF;
     padding: 2rem;
     color: #ffffff;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+    text-decoration: none;
   @include screen(large){
         font-size: $font-size;
     }
@@ -122,12 +123,12 @@ input{
         width: 60%;
     }
 }
-label{
-	font-size: 1.6rem;
-     @include screen(large){
-        font-size: $font-size;
-    }
-}
+// label{
+// 	font-size: 1.6rem;
+//      @include screen(large){
+//         font-size: $font-size;
+//     }
+// }
 span{
     font-size: 1rem;
 }

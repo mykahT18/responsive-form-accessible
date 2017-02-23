@@ -126,7 +126,8 @@ form {
   background: #4E92DF;
   padding: 2rem;
   color: #ffffff;
-  font-size: 1.6rem; }
+  font-size: 1.2rem;
+  text-decoration: none; }
   @media only screen and (min-width: 1000px) {
     .contactInfo {
       font-size: 1.6rem; } }
@@ -168,12 +169,6 @@ input {
       padding: 0.5rem 0.5rem;
       height: 4rem;
       width: 60%; } }
-
-label {
-  font-size: 1.6rem; }
-  @media only screen and (min-width: 1000px) {
-    label {
-      font-size: 1.6rem; } }
 
 span {
   font-size: 1rem; }

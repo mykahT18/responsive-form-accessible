@@ -135,7 +135,7 @@ select{
 	background-image: url(../svg/down-chevron.svg);
 	background-repeat: no-repeat;
     background-position: 97% 55%;
-    background-size: 3rem;
+    background-size: 2rem;
 	background-color: #E0E0E0;
     border-radius: 0.5rem;
     border-style: none;
@@ -146,7 +146,7 @@ select{
     width: 100%;
     height: 5rem;
     appearance: none;
-    
+
      @include screen(large){
         padding: 0.5rem 0.5rem;
         width: 60%;

@@ -25,17 +25,17 @@
 			<form action="">
 				<div class="reg-info">	
 					<label for="name">Name <span>required</span></label>
-					<input type="text" id="name" required="">
-					<p class="error"></p>
+					<input type="text" id="name" minlength="2" />
+					<p class="error"></p>	
 				</div>
 				<div class="reg-info">		
 					<label for="email">Email <span>required</span></label>
-					<input type="email" id="email" required="">
+					<input type="email" id="email" required/>
 					<p class="error"></p>
 				</div>
 				<div class="reg-info">
 					<label for="password">Password <span>required</span></label>
-					<input type="password" id="password">
+					<input type="password" id="password"  required pattern="[a-zA-Z0-9]+" minlength="8" maxlength="16 "/>
 					<p class="error"></p>
 				</div>
 				<div class="reg-info">
@@ -44,8 +44,9 @@
 					<p class="error"></p>
 				</div>
 				<div class="reg-info">
-					<!-- label for="country">Country</label> -->
-					<select name="select">
+					<label for="country">Country</label>
+					<select name="select" id="country">
+						<option value="selectcard">--- Please select ---</option>
 						<option value="AF">Afghanistan</option>
 						<option value="AX">Åland Islands</option>
 						<option value="AL">Albania</option>

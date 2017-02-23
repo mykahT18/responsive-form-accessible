@@ -154,6 +154,9 @@ form {
   text-indent: 2.5rem;
   margin-top: 0.8rem; }
 
+label {
+  display: block; }
+
 input {
   display: block;
   background: #E0E0E0;

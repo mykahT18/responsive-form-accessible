@@ -8,7 +8,7 @@
 
 html {
   font-family: $font-choice;
-  line-height: 1.5;
+  // line-height: 1.5;
 }
 body{
 	font-size: $font-size;
@@ -144,8 +144,9 @@ select{
     margin: 0.5rem 0rem;
     padding: 1.5rem 0.5rem;
     width: 100%;
-    height: 7rem;
+    height: 5rem;
     appearance: none;
+    
      @include screen(large){
         padding: 0.5rem 0.5rem;
         width: 60%;

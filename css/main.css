@@ -90,7 +90,9 @@ h2 {
       padding-left: 0rem; } }
 
 .error {
-  display: none; }
+  display: block;
+  margin-top: 0.5rem;
+  color: red; }
 
 @media only screen and (min-width: 1000px) {
   .mainContanier {
@@ -201,6 +203,7 @@ select {
 
 button {
   width: 92%;
+  outline: none;
   padding: 1rem 1rem;
   margin-top: 1rem;
   margin-right: 1rem;

@@ -40,7 +40,9 @@ h2{
     }
 }
 .error{
-    display: none;
+    display: block;
+    margin-top: 0.5rem;
+    color: red;
 }
 .mainContanier{
     @include screen(large){
@@ -50,8 +52,9 @@ h2{
     }
 
 }
-.form-container{
-    @include screen(large){
+@include screen(large){
+        
+    .form-container{
         order: 1;
         flex-basis: 55.3%;
     }
@@ -91,6 +94,7 @@ form{
     }
 
 }
+
 .phoneNumber{
 	background-image: url(../svg/phone.svg);
 	background-repeat: no-repeat;
@@ -126,12 +130,6 @@ input{
         width: 60%;
     }
 }
-// label{
-// 	font-size: 1.6rem;
-//      @include screen(large){
-//         font-size: $font-size;
-//     }
-// }
 span{
     font-size: 1rem;
 }
@@ -159,6 +157,7 @@ select{
 }
 button{
     width: 92%;
+    outline: none;
     padding: 1rem 1rem;
     margin-top: 1rem;
     margin-right: 1rem;

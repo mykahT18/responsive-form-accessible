@@ -82,39 +82,39 @@ submit.addEventListener('click', function(event){
 		// console.log(checkForm.errors);
         var reset = document.querySelectorAll('.error');
         
-           
-           if (errorMessages.length > 0) {
-                errorMessages.forEach( (err) => {
-                pass.insertAdjacentHTML('afterend', '<p class="error">' + err + '</p>')
-                })
-
-            }
-            if (errorName.length > 0){
-                errorName.forEach( (e) => {
-                 fullname.insertAdjacentHTML('afterend', '<p class="error">' + e + '</p>')
-                })
-                // console.log(errorName);
-            }
-            if (errorEmail.length > 0){
-                errorEmail.forEach( (er) =>{
-                    email.insertAdjacentHTML('afterend', '<p class="error">' + er + '</p>')
-                })
-            }
-            if (errorTel.length > 0){
-                errorTel.forEach( (error) => {
-                    telly.insertAdjacentHTML('afterend', '<p class="error">' + error + '</p>')
-                })
-            }
-            
-            
-            // console.log("_____________HELLLLLOOOOOO________________")
-		   if (checkPassword.errors.length == 0 && checkName.errors.length == 0 && checkEmail.errors.length == 0 && checkPhone.errors.length == 0) { 
-                submit.addEventListener('click', ready())
-            }
-        
-            reset.forEach( (r) => {
-                r.innerHTML = '';
+       
+       if (errorMessages.length > 0) {
+            errorMessages.forEach( (err) => {
+            pass.insertAdjacentHTML('afterend', '<p class="error">' + err + '</p>')
             })
+
+        }
+        if (errorName.length > 0){
+            errorName.forEach( (e) => {
+             fullname.insertAdjacentHTML('afterend', '<p class="error">' + e + '</p>')
+            })
+            // console.log(errorName);
+        }
+        if (errorEmail.length > 0){
+            errorEmail.forEach( (er) =>{
+                email.insertAdjacentHTML('afterend', '<p class="error">' + er + '</p>')
+            })
+        }
+        if (errorTel.length > 0){
+            errorTel.forEach( (error) => {
+                telly.insertAdjacentHTML('afterend', '<p class="error">' + error + '</p>')
+            })
+        }
+        
+        
+        // console.log("_____________HELLLLLOOOOOO________________")
+	   if (checkPassword.errors.length == 0 && checkName.errors.length == 0 && checkEmail.errors.length == 0 && checkPhone.errors.length == 0) { 
+            submit.addEventListener('click', ready())
+        }
+    
+        reset.forEach( (r) => {
+            r.innerHTML = '';
+        })
 
 	})
 function ready(){

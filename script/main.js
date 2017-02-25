@@ -2,8 +2,8 @@ var submit = document.querySelector('button');
 var fullname = document.querySelector('#name');
 var email = document.querySelector('#email');
 var pass = document.querySelector('#password');
-var tel = document.querySelector('#number');
-var country = document.querySelector("#country")[0].value;
+var telly = document.querySelector('#number');
+
 
 
 
@@ -44,8 +44,20 @@ class checkForm {
     	if(!this.input.value.match(/\./g)){
     		this.populateErrors('Email must folow this format "example@service.com"')
     	}
+    }
+    if(this.type == 'tel'){
+        if(this.input.value != ''){
+        	if(!this.input.value.match(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/g)){
+        		console.log("DO YOU SEE ME NOW!!");
+        		this.populateErrors('Must be a valid phone number format: "888-888-8888", "888 888 8888", "888.888.8888"')
+        	}
+        }
+    }
+    if(this.type == 'text'){
+    	if(this.input.value == ''){
+    		this.populateErrors('Please enter your name')
+    	}
     }	
-	
 	if (status.typeMismatch) {
       this.populateErrors('Entry does not match the field type');
     }
@@ -61,13 +73,18 @@ submit.addEventListener('click', function(event){
 
 		var checkPassword = new checkForm(pass, "password");
 		var errorMessages = checkPassword.getError();
-		var checkName = new checkForm(fullname, "name");
+		var checkName = new checkForm(fullname, "text");
 		var errorName = checkName.getError();
 		var checkEmail = new checkForm(email, "email");
 		var errorEmail = checkEmail.getError();
-		var checkPhone = new checkForm(tel, "number");
+		var checkPhone = new checkForm(telly, "tel");
 		var errorTel = checkPhone.getError();
 		// console.log(checkForm.errors);
+        var reset = document.querySelectorAll('.error');
+        
+        reset.forEach( (r) => {
+            r.innerHTML = '';
+        })
 		if (errorMessages.length > 0) {
     		errorMessages.forEach( (err) => {
       		pass.insertAdjacentHTML('afterend', '<p class="error">' + err + '</p>')
@@ -78,10 +95,25 @@ submit.addEventListener('click', function(event){
     		errorName.forEach( (e) => {
     		 fullname.insertAdjacentHTML('afterend', '<p class="error">' + e + '</p>')
     		})
+    		// console.log(errorName);
     	}
     	if (errorEmail.length > 0){
     		errorEmail.forEach( (er) =>{
     			email.insertAdjacentHTML('afterend', '<p class="error">' + er + '</p>')
     		})
     	}
+    	if (errorTel.length > 0){
+    		errorTel.forEach( (error) => {
+    			telly.insertAdjacentHTML('afterend', '<p class="error">' + error + '</p>')
+    			console.log(errorTel);
+    		})
+    	}
+
+
+
+        var form = document.querySelector('#myform');
+        form.innerHTML = '<div id="submitted"><img src="../svg/circle-check.svg" alt="checked mark"><p>Awesome! You are registered</p></div>';
+
+        console.log(form);
+
 	})

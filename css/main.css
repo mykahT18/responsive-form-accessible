@@ -90,9 +90,30 @@ h2 {
       padding-left: 0rem; } }
 
 .error {
-  display: block;
+  background-image: url(../svg/warning.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
   margin-top: 0.5rem;
-  color: red; }
+  color: red;
+  font-size: 1.2rem;
+  text-indent: 23px; }
+
+#submitted {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  background: #F7F7F7; }
+  #submitted img {
+    margin: 1rem 0rem; }
+  #submitted p {
+    text-align: center;
+    margin-bottom: 3rem; }
+  @media only screen and (min-width: 1000px) {
+    #submitted {
+      padding: 17rem; } }
 
 @media only screen and (min-width: 1000px) {
   .mainContanier {

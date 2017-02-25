@@ -22,10 +22,10 @@
 			</div>
 			<div class="form-container">
 				<h2>Register</h2>
-				<form action="">
+				<form action="" id="myform">
 					<div class="reg-info">
 						<label for="name">Name <span>required</span></label>
-						<input type="text" id="name"/>
+						<input type="text" id="name" required/>
 					</div>
 					<div class="reg-info">
 						<label for="email">Email <span>required</span></label>
@@ -39,7 +39,7 @@
 					</div>
 					<div class="reg-info">
 						<label for="number">Phone</label>
-						<input type="tel" id="number" required pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+						<input type="tel" id="number"/>
 					</div>
 					<div class="reg-info">
 						<label for="country">Country</label>

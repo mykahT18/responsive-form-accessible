@@ -12,7 +12,7 @@ class checkForm {
 	this.input = input;
     this.type = type;
     this.errors = [];
-    // console.log(this.errors);
+    console.log(this.errors);
     // console.log(this.input);
 	}
 
@@ -46,7 +46,7 @@ class checkForm {
     	}
     }
     if(this.type == 'tel'){
-        if(this.input.value != ''){
+        if(this.input.value !== ''){
         	if(!this.input.value.match(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/g)){
         		console.log("DO YOU SEE ME NOW!!");
         		this.populateErrors('Must be a valid phone number format: "888-888-8888", "888 888 8888", "888.888.8888"')
@@ -54,7 +54,7 @@ class checkForm {
         }
     }
     if(this.type == 'text'){
-    	if(this.input.value == ''){
+    	if(this.input.value === ''){
     		this.populateErrors('Please enter your name')
     	}
     }	
@@ -82,38 +82,43 @@ submit.addEventListener('click', function(event){
 		// console.log(checkForm.errors);
         var reset = document.querySelectorAll('.error');
         
-        reset.forEach( (r) => {
-            r.innerHTML = '';
-        })
-		if (errorMessages.length > 0) {
-    		errorMessages.forEach( (err) => {
-      		pass.insertAdjacentHTML('afterend', '<p class="error">' + err + '</p>')
-    		})
+           
+           if (errorMessages.length > 0) {
+                errorMessages.forEach( (err) => {
+                pass.insertAdjacentHTML('afterend', '<p class="error">' + err + '</p>')
+                })
 
-    	}
-    	if (errorName.length > 0){
-    		errorName.forEach( (e) => {
-    		 fullname.insertAdjacentHTML('afterend', '<p class="error">' + e + '</p>')
-    		})
-    		// console.log(errorName);
-    	}
-    	if (errorEmail.length > 0){
-    		errorEmail.forEach( (er) =>{
-    			email.insertAdjacentHTML('afterend', '<p class="error">' + er + '</p>')
-    		})
-    	}
-    	if (errorTel.length > 0){
-    		errorTel.forEach( (error) => {
-    			telly.insertAdjacentHTML('afterend', '<p class="error">' + error + '</p>')
-    			console.log(errorTel);
-    		})
-    	}
-
-
-
-        var form = document.querySelector('#myform');
-        form.innerHTML = '<div id="submitted"><img src="../svg/circle-check.svg" alt="checked mark"><p>Awesome! You are registered</p></div>';
-
-        console.log(form);
+            }
+            if (errorName.length > 0){
+                errorName.forEach( (e) => {
+                 fullname.insertAdjacentHTML('afterend', '<p class="error">' + e + '</p>')
+                })
+                // console.log(errorName);
+            }
+            if (errorEmail.length > 0){
+                errorEmail.forEach( (er) =>{
+                    email.insertAdjacentHTML('afterend', '<p class="error">' + er + '</p>')
+                })
+            }
+            if (errorTel.length > 0){
+                errorTel.forEach( (error) => {
+                    telly.insertAdjacentHTML('afterend', '<p class="error">' + error + '</p>')
+                })
+            }
+            
+            
+            // console.log("_____________HELLLLLOOOOOO________________")
+		   if (checkPassword.errors.length == 0 && checkName.errors.length == 0 && checkEmail.errors.length == 0 && checkPhone.errors.length == 0) { 
+                submit.addEventListener('click', ready())
+            }
+        
+            reset.forEach( (r) => {
+                r.innerHTML = '';
+            })
 
 	})
+function ready(){
+    console.log('ready to submit');
+    var form = document.querySelector('#myform');
+    form.innerHTML = '<div id="submitted"><img src="../svg/circle-check.svg" alt="checked mark"><p>Awesome! You are registered</p></div>';
+}

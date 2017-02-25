@@ -120,5 +120,5 @@ submit.addEventListener('click', function(event){
 function ready(){
     console.log('ready to submit');
     var form = document.querySelector('#myform');
-    form.innerHTML = '<div id="submitted"><img src="../svg/circle-check.svg" alt="checked mark"><p>Awesome! You are registered</p></div>';
+    form.innerHTML = '<div id="submitted"><img src="../svg/circle-check.svg" alt="check mark for form being submitted"><p>Awesome! You are registered</p></div>';
 }
